@@ -1,0 +1,91 @@
+.colored-text {
+    color: #0000ff; /* You can replace #ff0000 with any valid color value */
+  }
+
+  .blue {
+    color: #0000ff; /* Blue */
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+    
+  }
+  
+  body {
+    border: 5px solid #000; /* Sets a solid black border around the entire page with a thickness of 5 pixels */
+  }
+  
+  .content {
+    padding: 50px; /* Adds padding inside the border to prevent content from touching the border */
+  }
+      
+  html ,body {  
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    /* justify-content: left;
+    align-items: left; */
+    background-color: rgba(2, 2, 2, 0.014);
+    overflow: hidden;
+    justify-content: left;
+    align-items: left; 
+    
+ 
+}
+.loader, .loader span {
+    width: 10em;
+    height: 10em;
+    border: 0.25em solid rgb(20, 20, 20);
+    font-size: 10px;
+    border-radius: 1em;
+    position: absolute;
+    mix-blend-mode: screen;
+}
+.loader{
+    background-color: gold;
+    animation: rotating 2s linear infinite;
+}
+@keyframes rotating{
+    to{
+        transform: rotate(1turn);
+    }
+}
+.loader span {
+    animation: de-rotating 4s
+     linear infinite;
+}
+@keyframes de-rotating {
+    from, to{
+        transform: rotate(0deg)
+            scale(0.4);
+    } 
+    50% {
+        transform: rotate(-180deg)
+            scale(0.8);
+    }
+}
+.loader span:nth-child(1) {
+    top: 5em;
+    left: 5em;
+    background-color: dodgerblue;
+}
+.loader span:nth-child(2) {
+    top: -5em;
+    left: 5em;
+    background-color: hotpink;
+}
+.loader span:nth-child(3) {
+    top: 5em;
+    left: -5em;
+    background-color: mediumpurple;
+}
+.loader span:nth-child(4) {
+    top: -5em;
+    left: -5em;
+    background-color: limegreen;
+}
+p {
+    text-align: left;
+}
